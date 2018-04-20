@@ -52,6 +52,7 @@ Vue.component('task-card', {
 })
 
 var vm = new Vue({
+
     el: '#board',
     data: {
         // status の数値と状態の対応は、1: 未対応 2: 処理中 3: 完了
@@ -60,7 +61,10 @@ var vm = new Vue({
             {name: 'task 2', status: 1, assignee: '🐶', mandays: 2 },
             {name: 'task 3', status: 2, assignee: '🐱', mandays: 1 },
             {name: 'task 4', status: 3, assignee: '🐹', mandays: 1 },
-        ]
+        ],
+        newTaskName: '',
+        newTaskAssignee: '',
+        newTaskMandays: ''
     },
     computed: {
         tasksOpen: function () {
